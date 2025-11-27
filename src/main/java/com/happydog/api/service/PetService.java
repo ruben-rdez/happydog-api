@@ -1,18 +1,19 @@
 package com.happydog.api.service;
 
-import com.happydog.api.entity.Pet;
+import com.happydog.api.dto.PetRequest;
+import com.happydog.api.dto.PetResponse;
 
 import java.util.List;
 
 public interface PetService {
     
-    List<Pet> getAllPets();
+    List<PetResponse> getAllPets();
     
-    Pet getPetById(Long id);
+    PetResponse getPetById(Long id);
     
-    Pet createPet(Pet pet);
+    PetResponse createPet(PetRequest pet);
     
-    Pet updatePet(Long id, Pet pet);
+    PetResponse updatePet(Long id, PetRequest pet);
     
     void deletePet(Long id);
 }
